@@ -29,6 +29,7 @@ def find_version(version_file_path):
 extensions = []
 cmdclass = {}
 
+'''
 force_cuda = os.getenv("FORCE_CUDA", "0") == "1"
 if (torch.cuda.is_available() and CUDA_HOME is not None) or force_cuda:
     extensions.extend(
@@ -47,7 +48,7 @@ if (torch.cuda.is_available() and CUDA_HOME is not None) or force_cuda:
     cmdclass["build_ext"] = BuildExtension
 else:
     warnings.warn("Cannot install FusedAdam cuda.")
-
+'''
 
 if __name__ == "__main__":
     setuptools.setup(
